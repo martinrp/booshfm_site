@@ -12,18 +12,17 @@ from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from wagtail.wagtailsearch import index
 
-
-
 class ProfilesIndexPage(Page):
     intro = RichTextField(blank=True)
 
-    content_panels = Page.content_panels + [
-        FieldPanel('intro', classname="full")
-    ]
+    def get_context(self, request):
+        # Update context to include only published posts, ordered by reverse-chron
+        context = super(ProfilesIndexPage, self).get_context(request)
+        profilepages = self.get_children().live().order_by('-first_published_at')
+        context['profilepages'] = profilepages
+        return context
 
-# Keep the definition of BIndexPage, and add:
-
-
+# Keep the definition of ProfilePage, and add:
 class ProfilePage(Page):
     name = models.CharField(max_length=250)
     bio = RichTextField(blank=True)
