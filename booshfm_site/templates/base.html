@@ -37,7 +37,14 @@
         <header class="mdl-layout__header">
           <div class="mdl-layout__header-row">
             <!-- Title -->
-            <span class="mdl-layout-title">Title</span>
+            <span class="mdl-layout-title">
+              {% block layout_title %}
+                  {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+                  {% with self.get_site.site_name as site_name %}
+                      {% if site_name %}- {{ site_name }}{% endif %}
+                  {% endwith %}
+              {% endblock %}
+            </span>
             <!-- Add spacer, to align navigation to the right -->
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation. We hide it in small screens. -->
@@ -50,7 +57,14 @@
           </div>
         </header>
         <div class="mdl-layout__drawer">
-          <span class="mdl-layout-title">Title</span>
+          <span class="mdl-layout-title">
+            {% block drawer_title %}
+                {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+                {% with self.get_site.site_name as site_name %}
+                    {% if site_name %}- {{ site_name }}{% endif %}
+                {% endwith %}
+            {% endblock %}
+          </span>
           <nav class="mdl-navigation">
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
@@ -61,7 +75,9 @@
         <main class="mdl-layout__content">
           <div class="page-content">
             {% wagtailuserbar %}
-            {% block content %}{% endblock %}
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--12-col">{% block content %}{% endblock %}</div>
+            </div>
           </div>
         </main>
       </div>
