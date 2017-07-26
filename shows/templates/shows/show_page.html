@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-showpage{% endblock %}
+
+{% block content %}
+    <h1>{{ show.title }}</h1>
+    <p class="meta">{{ show.date }}</p>
+
+    <div class="showname">{{ show.showname }}</div>
+
+    {{ page.showdescription|richtext }}
+
+    <p><a href="{{ page.get_parent.url }}">Return to shows</a></p>
+
+{% endblock %}
