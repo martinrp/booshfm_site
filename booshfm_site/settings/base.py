@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'home',
     'profiles',
     'shows',
+    'schedule',
     'search',
 
     'wagtail.wagtailforms',
