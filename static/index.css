@@ -1,0 +1,17 @@
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px; }
+
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background: url("/static/images/blue_london_1920x1080.jpg") bottom right 100% no-repeat #46B6AC; }
+
+.demo-layout-transparent {
+  background: url("/static/images/blue_london_1920x1080.jpg") center/cover; }
+
+.logo {
+  margin-top: 25px;
+  width: 25%;
+  height: auto; }
+
+/*# sourceMappingURL=../../../../../../../static/index.css.map */

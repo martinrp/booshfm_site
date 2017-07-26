@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
     'modelcluster',
     'taggit',
+    'sass_processor',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -123,10 +124,16 @@ USE_TZ = True
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
 ]
 
 STATICFILES_DIRS = [
     os.path.join(PROJECT_DIR, 'static'),
+]
+
+SASS_PROCESSOR_INCLUDE_DIRS = [
+    os.path.join(PROJECT_DIR, 'scss'),
+    os.path.join(PROJECT_DIR, 'node_modules'),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

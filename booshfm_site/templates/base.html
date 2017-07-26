@@ -1,4 +1,5 @@
 {% load static wagtailuserbar %}
+{% load sass_tags %}
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -23,32 +24,42 @@
 
         {# Global stylesheets #}
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-indigo.min.css" />
-        <link rel="stylesheet" type="text/css" href="{% static 'css/booshfm_site.css' %}">
+
+        <link href="{% sass_src 'scss/index.scss' %}" rel="stylesheet" type="text/css" />
 
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
         {% endblock %}
     </head>
 
-    <body class="{% block body_class %}{% endblock %}">
+    <body class="layout-transparent {% block body_class %}{% endblock %}">
       <!-- Always shows a header, even in smaller screens. -->
       <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
           <div class="mdl-layout__header-row">
             <!-- Title -->
-            <span class="mdl-layout-title"></span>
+            <span class="mdl-layout-title">
+              <img src="/static/images/boosh_icon_245x300.png" class="logo">
+            </span>
             <!-- Add spacer, to align navigation to the right -->
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation. We hide it in small screens. -->
-            <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <!-- <nav class="mdl-navigation mdl-layout--large-screen-only">
               <a class="mdl-navigation__link" href="/">Home</a>
               <a class="mdl-navigation__link" href="/schedule">Schedule</a>
               <a class="mdl-navigation__link" href="/profiles">Profiles</a>
               <a class="mdl-navigation__link" href="/shows">Shows</a>
-            </nav>
+            </nav> -->
           </div>
         </header>
+        <div class="mdl-layout__drawer">
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="/">Home</a>
+            <a class="mdl-navigation__link" href="/schedule">Schedule</a>
+            <a class="mdl-navigation__link" href="/profiles">Profiles</a>
+            <a class="mdl-navigation__link" href="/shows">Shows</a>
+          </nav>
+        </div>
         <main class="mdl-layout__content">
           <div class="page-content">
             {% wagtailuserbar %}

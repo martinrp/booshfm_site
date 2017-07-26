@@ -2,9 +2,9 @@
 
 {% load wagtailcore_tags %}
 
-{% block body_class %}template-homepage{% endblock %}
+{% block body_class %}template-homepage layout-transparent {% endblock %}
 
 {% block content %}
     {% load wagtailcore_tags %}
-    {{ page.body|richtext }}
+    <!-- {{ page.body|richtext }} -->
 {% endblock %}
