@@ -1,0 +1,9 @@
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('http://eskipaper.com/images/cool-city-lights-1.jpg') bottom right 100% no-repeat #46B6AC;
+}
