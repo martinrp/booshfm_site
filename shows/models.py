@@ -11,13 +11,19 @@ from wagtail.wagtailsearch import index
 
 
 
-class ShowsIndexPage(Page):
+class ShowIndexPage(Page):
     intro = RichTextField(blank=True)
 
     content_panels = Page.content_panels + [
         FieldPanel('intro', classname="full")
     ]
 
+    def get_context(self, request):
+        # Update context to include only published posts, ordered by reverse-chron
+        context = super(ShowIndexPage, self).get_context(request)
+        showpages = self.get_children().live().order_by('-first_published_at')
+        context['showpages'] = showpages
+        return context
 
 # Keep the definition of BlogIndexPage, and add:
 

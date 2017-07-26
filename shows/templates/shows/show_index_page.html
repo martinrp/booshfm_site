@@ -2,17 +2,18 @@
 
 {% load wagtailcore_tags %}
 
-{% block body_class %}template-showsindexpage{% endblock %}
+{% block body_class %}template-showindexpage{% endblock %}
 
 {% block content %}
     <h1>{{ page.title }}</h1>
 
     <div class="intro">{{ page.intro|richtext }}</div>
 
-    {% for post in page.get_children %}
+    {% for post in blogpages %}
         <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
         {{ post.specific.showname }}
         {{ post.specific.showdescription|richtext }}
+      {% endwith %}
     {% endfor %}
 
 {% endblock %}
