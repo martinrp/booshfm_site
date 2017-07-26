@@ -9,8 +9,11 @@
 
     <div class="intro">{{ page.intro|richtext }}</div>
 
-    {% for post in blogpages %}
-        <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
+    {% for post in showpages %}
+      {% with post=post.specific %}
+        <h2><a href="{% pageurl post %}">{{ post.showname }}</a></h2>
+
+        <p>{{ post.showname }}</p>
         {{ post.specific.showname }}
         {{ post.specific.showdescription|richtext }}
       {% endwith %}
