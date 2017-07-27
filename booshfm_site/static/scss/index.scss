@@ -38,6 +38,17 @@
 @import "mdl/shadow/shadow";
 @import "mdl/grid/grid";
 
+// Add fonts
+@font-face {
+  font-family: "Nexa Light";
+  src: url('/static/fonts/nexa/Nexa Light.otf') format("truetype");
+}
+
+@font-face {
+  font-family: "Nexa Bold";
+  src: url('/static/fonts/nexa/Nexa Bold.otf') format("truetype");
+}
+
 // MDL Drawer right§
 .mdl-layout__drawer-button, .mdl-layout__drawer{
   left: initial;
@@ -65,26 +76,76 @@
     url('/static/images/blue_london_1920x1080.jpg') bottom right 100% no-repeat #46B6AC;
 }
 
-$topCol: rgba(0, 0, 0, 0.5);
-$botCol: rgba(0, 0, 0, 1);
+$topCol: rgba(0, 0, 0, 0.05);
+$botCol: rgba(0, 0, 0, 0.9);
 $bgCol: rgba(0, 0, 0, 0);
-// $bgImage: url('/static/images/dark_triangles.png') repeat;
-$bgImage: url('/static/images/blue_london_1920x1080.jpg') center / cover;
+$bgImage: url('/static/images/dark_triangles.png') repeat;
+$bgImageHome: url('/static/images/blue_london_1920x1080.jpg') center / cover;
 
-.layout-transparent {
-  background: $bgImage;
-  background: -moz-linear-gradient(top, $bgCol 0%, $topCol 0%, $botCol 100%), $bgImage;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $bgCol), color-stop(0%, $topCol), color-stop(100%, $botCol)), $bgImage;
-  background: -webkit-linear-gradient(top, $bgCol 0%, $topCol 0%, $botCol 100%), $bgImage;
-  background: -o-linear-gradient(top, $bgCol 0%, $topCol 0%, $botCol 100%), $bgImage;
-  background: -ms-linear-gradient(top, $bgCol 0%, $topCol 0%, $botCol 100%), $bgImage;
-  background: linear-gradient(to bottom, $bgCol 0%, $topCol 0%, $botCol 100%), $bgImage;
-  height: 200px;
+// .layout-transparent {
+//   background: $bgImage;
+//   background: -moz-linear-gradient(top, $bgCol 0%, $topCol 0%, $botCol 100%) $bgImage;
+//   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $bgCol), color-stop(0%, $topCol), color-stop(100%, $botCol)) $bgImage;
+//   background: -webkit-linear-gradient(top, $bgCol 0%, $topCol 0%, $botCol 100%) $bgImage;
+//   background: -o-linear-gradient(top, $bgCol 0%, $topCol 0%, $botCol 100%) $bgImage;
+//   background: -ms-linear-gradient(top, $bgCol 0%, $topCol 0%, $botCol 100%) $bgImage;
+//   background: linear-gradient(to bottom, $bgCol 0%, $topCol 0%, $botCol 100%) $bgImage;
+// }
+
+.layout-transparent:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: $bgImageHome;
+    background: -moz-linear-gradient(top, $bgCol 0%, $topCol 0%, $botCol 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $bgCol), color-stop(0%, $topCol), color-stop(100%, $botCol));
+    background: -webkit-linear-gradient(top, $bgCol 0%, $topCol 0%, $botCol 100%);
+    background: -o-linear-gradient(top, $bgCol 0%, $topCol 0%, $botCol 100%);
+    background: -ms-linear-gradient(top, $bgCol 0%, $topCol 0%, $botCol 100%);
+    background: linear-gradient(to bottom, $bgCol 0%, $topCol 0%, $botCol 100%);
+}
+
+.mdl-layout-title {
+    padding-top: 80px;
 }
 
 .logo {
-  margin-top: 65px;
-  margin-left: -45px;
-  width: 35%;
+  margin-top: -15px;
+  margin-left: -35px;
+  padding-right: 10px;
+  width: 60px;
   height: auto;
+}
+
+.title-txt {
+  font-family: "Nexa Bold";
+  color: #ffffff;
+  text-align: left;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+.now-playing {
+  margin-top: 10%;
+  h3 {
+    font-family: "Nexa Light";
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+  }
+  h1 {
+    font-family: "Nexa Bold";
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.audio-player {
+  text-align: center;
+  align-items: center;
 }

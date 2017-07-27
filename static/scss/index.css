@@ -11182,6 +11182,14 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     .mdl-cell--11-offset-desktop.mdl-cell--11-offset-desktop {
       margin-left: 91.66667%; } }
 
+@font-face {
+  font-family: "Nexa Light";
+  src: url("/static/fonts/nexa/Nexa Light.otf") format("truetype"); }
+
+@font-face {
+  font-family: "Nexa Bold";
+  src: url("/static/fonts/nexa/Nexa Bold.otf") format("truetype"); }
+
 .mdl-layout__drawer-button, .mdl-layout__drawer {
   left: initial;
   right: 0; }
@@ -11201,20 +11209,54 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
   color: #fff;
   background: url("/static/images/blue_london_1920x1080.jpg") bottom right 100% no-repeat #46B6AC; }
 
-.layout-transparent {
+.layout-transparent:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
   background: url("/static/images/blue_london_1920x1080.jpg") center/cover;
-  background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.5) 0%, black 100%), url("/static/images/blue_london_1920x1080.jpg") center/cover;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(0%, rgba(0, 0, 0, 0.5)), color-stop(100%, black)), url("/static/images/blue_london_1920x1080.jpg") center/cover;
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.5) 0%, black 100%), url("/static/images/blue_london_1920x1080.jpg") center/cover;
-  background: -o-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.5) 0%, black 100%), url("/static/images/blue_london_1920x1080.jpg") center/cover;
-  background: -ms-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.5) 0%, black 100%), url("/static/images/blue_london_1920x1080.jpg") center/cover;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 0%, black 100%), url("/static/images/blue_london_1920x1080.jpg") center/cover;
-  height: 200px; }
+  background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.9) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(0%, rgba(0, 0, 0, 0.05)), color-stop(100%, rgba(0, 0, 0, 0.9)));
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.9) 100%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.9) 100%);
+  background: -ms-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.9) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.9) 100%); }
+
+.mdl-layout-title {
+  padding-top: 80px; }
 
 .logo {
-  margin-top: 65px;
-  margin-left: -45px;
-  width: 35%;
+  margin-top: -15px;
+  margin-left: -35px;
+  padding-right: 10px;
+  width: 60px;
   height: auto; }
+
+.title-txt {
+  font-family: "Nexa Bold";
+  color: #ffffff;
+  text-align: left;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4); }
+
+.now-playing {
+  margin-top: 10%; }
+  .now-playing h3 {
+    font-family: "Nexa Light";
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4); }
+  .now-playing h1 {
+    font-family: "Nexa Bold";
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4); }
+
+.audio-player {
+  text-align: center;
+  align-items: center; }
 
 /*# sourceMappingURL=../../../../../../../../static/scss/index.css.map */

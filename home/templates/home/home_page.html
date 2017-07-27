@@ -2,9 +2,26 @@
 
 {% load wagtailcore_tags %}
 
-{% block body_class %}template-homepage layout-transparent {% endblock %}
+{% block body_class %}layout-transparent template-homepage{% endblock %}
+{% block body_style %}background: url('/static/images/blue_london_1920x1080.jpg') center / cover;{% endblock %}
 
 {% block content %}
     {% load wagtailcore_tags %}
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="now-playing">
+          <h3>Now playing:</h3>
+          <h1>
+            <span id="songtitle"></span> - <span id="songartist"></span>
+          </h1>
+          <div class="audio-player">
+            <audio controls="" preload="none">
+              <source src="http://stream.boosh.fm:8000/boosh256mp3" type="audio/mpeg">
+              Your browser does not support the audio element. Get <a href="https://www.google.com/chrome/browser/desktop/">Chrome</a>
+            </audio>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- {{ page.body|richtext }} -->
 {% endblock %}
