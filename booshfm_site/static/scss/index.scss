@@ -150,6 +150,20 @@ $bgImageHome: url('/static/images/blue_london_1920x1080.jpg') center / cover;
   align-items: center;
 }
 
+.social {
+  margin-top: 30px;
+  font-family: "Nexa Light";
+  text-align: left;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  text-align: center;
+  color: #fff !important;
+
+  a {
+    color: #fff !important;
+  }
+}
+
 @import "mdl/variables";
 // Schedule
 #scheduleTabs {

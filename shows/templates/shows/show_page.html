@@ -2,7 +2,8 @@
 
 {% load wagtailcore_tags wagtailimages_tags %}
 
-{% block body_class %}template-showpage{% endblock %}
+{% block body_class %}layout-transparent template-showpage{% endblock %}
+{% block body_style %}background: url('/static/images/dark_triangles.png') repeat;{% endblock %}
 
 {% block content %}
     <h1>{{ show.title }}</h1>

@@ -11259,6 +11259,17 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
   text-align: center;
   align-items: center; }
 
+.social {
+  margin-top: 30px;
+  font-family: "Nexa Light";
+  text-align: left;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  text-align: center;
+  color: #fff !important; }
+  .social a {
+    color: #fff !important; }
+
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
