@@ -11206,8 +11206,16 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
   height: 320px; }
 
 .card-square > .mdl-card__title {
-  color: #fff;
-  background: url("/static/images/blue_london_1920x1080.jpg") bottom right 100% no-repeat #46B6AC; }
+  color: #fff; }
+
+h1 {
+  font-family: "Nexa Bold";
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4); }
+
+.schedule-index-page, .show-index-page, .profiles-index-page {
+  padding-top: 20px; }
 
 .layout-transparent:before {
   content: ' ';
@@ -11249,18 +11257,13 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     color: #ffffff;
     text-align: center;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4); }
-  .now-playing h1 {
-    font-family: "Nexa Bold";
-    color: #ffffff;
-    text-align: center;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4); }
 
 .audio-player {
   text-align: center;
   align-items: center; }
 
 .social {
-  margin-top: 30px;
+  margin-top: 40px;
   font-family: "Nexa Light";
   text-align: left;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
@@ -11423,9 +11426,6 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
 /* SNACKBAR */
 /* TOOLTIP */
 /* CHIP */
-#scheduleTabs {
-  padding-top: 60px; }
-
 .ui-tabs-nav {
   display: flex;
   flex-direction: row;

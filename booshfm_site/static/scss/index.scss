@@ -72,8 +72,8 @@
 
 .card-square > .mdl-card__title {
   color: #fff;
-  background:
-    url('/static/images/blue_london_1920x1080.jpg') bottom right 100% no-repeat #46B6AC;
+  // background:
+  //   url('/static/images/blue_london_1920x1080.jpg') bottom right 100% no-repeat #46B6AC;
 }
 
 $topCol: rgba(0, 0, 0, 0.05);
@@ -91,6 +91,17 @@ $bgImageHome: url('/static/images/blue_london_1920x1080.jpg') center / cover;
 //   background: -ms-linear-gradient(top, $bgCol 0%, $topCol 0%, $botCol 100%) $bgImage;
 //   background: linear-gradient(to bottom, $bgCol 0%, $topCol 0%, $botCol 100%) $bgImage;
 // }
+
+h1 {
+  font-family: "Nexa Bold";
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+.schedule-index-page, .show-index-page, .profiles-index-page {
+  padding-top: 20px;
+}
 
 .layout-transparent:before {
     content: ' ';
@@ -137,12 +148,6 @@ $bgImageHome: url('/static/images/blue_london_1920x1080.jpg') center / cover;
     text-align: center;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
   }
-  h1 {
-    font-family: "Nexa Bold";
-    color: #ffffff;
-    text-align: center;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
-  }
 }
 
 .audio-player {
@@ -151,7 +156,7 @@ $bgImageHome: url('/static/images/blue_london_1920x1080.jpg') center / cover;
 }
 
 .social {
-  margin-top: 30px;
+  margin-top: 40px;
   font-family: "Nexa Light";
   text-align: left;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
@@ -167,7 +172,7 @@ $bgImageHome: url('/static/images/blue_london_1920x1080.jpg') center / cover;
 @import "mdl/variables";
 // Schedule
 #scheduleTabs {
-  padding-top: 60px;
+  // padding-top: 20px;
 }
 .ui-tabs-nav {
   display         : flex;

@@ -6,7 +6,8 @@
 {% block body_style %}background: url('/static/images/dark_triangles.png') repeat;{% endblock %}
 
 {% block content %}
-    <!-- <h1>{{ page.title }}</h1> -->
+  <div class="show-index-page">
+    <h1>{{ page.title }}</h1>
     <!-- <div class="intro">{{ page.intro|richtext }}</div> -->
 
     <div class="mdl-grid">
@@ -14,7 +15,10 @@
       <div class="mdl-cell mdl-cell--4-col">
         {% with show=show.specific %}
         <div class="card-square mdl-card mdl-shadow--2dp">
-          <div class="mdl-card__title mdl-card--expand">
+          <!-- TODO: Put dynamic image in below  -->
+          <div
+            style="background:url('/static/images/blue_london_1920x1080.jpg') bottom right 100% no-repeat #46B6AC;"
+            class="mdl-card__title mdl-card--expand">
             <h2 class="mdl-card__title-text">{{ show.showname }}</h2>
           </div>
 
@@ -23,15 +27,16 @@
             {{ show.specific.showdescription|richtext }}
           </div>
 
-          <div class="mdl-card__actions mdl-card--border">
+          <!-- <div class="mdl-card__actions mdl-card--border">
             <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{% pageurl show %}">
               View {{ show.specific.showname }}
             </a>
-          </div>
+          </div> -->
 
         </div>
         {% endwith %}
       </div>
     {% endfor %}
     </div>
+  </div>
 {% endblock %}

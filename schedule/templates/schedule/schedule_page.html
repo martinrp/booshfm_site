@@ -6,6 +6,8 @@
 {% block body_style %}background: url('/static/images/dark_triangles.png') repeat;{% endblock %}
 
 {% block content %}
+<div class="schedule-index-page">
+  <h1>{{ page.title }}</h1>
     <!-- {% for post in page.get_children %}
         <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
         {{ post.specific.intro }}
@@ -19,5 +21,5 @@
         <div id="scheduleTabs" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect"></div>
       </div>
     </div>
-
+</div>
 {% endblock %}
