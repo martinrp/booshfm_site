@@ -149,3 +149,91 @@ $bgImageHome: url('/static/images/blue_london_1920x1080.jpg') center / cover;
   text-align: center;
   align-items: center;
 }
+
+@import "mdl/variables";
+// Schedule
+#scheduleTabs {
+  padding-top: 60px;
+}
+.ui-tabs-nav {
+  display         : flex;
+  flex-direction  : row;
+  justify-content : center; // ⇾
+  align-content   : space-between; // ||
+  align-items     : flex-start; // ↓
+  height          : 48px;
+  padding         : 0 0 0 0;
+  margin          : 0;
+  border-bottom   : none !important;
+}
+
+.ui-tabs {
+  table { border-collapse: collapse; }
+  td, li, ul, a {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+  }
+
+  tbody {
+    td {
+      border-bottom-style: solid !important;
+    }
+  }
+
+  a {
+    font-family: "Nexa Light";
+    color: #ffffff;
+  }
+
+  .ui-state-default {
+    a, td {
+      border: none !important;
+    }
+  }
+
+  .ui-state-active {
+    border-bottom: none !important;
+    a {
+      border: none !important;
+      box-sizing: border-box !important;
+      -moz-box-sizing: border-box !important;
+      -webkit-box-sizing: border-box !important;
+      border-bottom: 1px solid #fff !important;
+    }
+  }
+
+  background-color: rgba(0, 0, 0, 0) !important;
+
+  h4, p, a, td {
+    color: rgba(255, 255, 255, 1) !important;
+  }
+
+  thead {
+    h4, p, a, td {
+      color: rgba(0, 0, 0, 0.9) !important;
+    }
+  }
+
+  .ui-state-active {
+
+  }
+}
+
+.ui-state-default {
+  margin: 0;
+  border: none;
+  padding: 0;
+
+  float: left;
+  position: relative;
+  display: block;
+
+  text-decoration: none;
+  height: 58px;
+  line-height: 58px;
+
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  overflow: hidden;
+}

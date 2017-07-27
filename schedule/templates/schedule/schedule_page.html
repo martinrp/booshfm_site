@@ -6,13 +6,18 @@
 {% block body_style %}background: url('/static/images/dark_triangles.png') repeat;{% endblock %}
 
 {% block content %}
-    <!-- <h1>{{ page.title }}</h1> -->
-    <!-- <div class="intro">{{ page.intro|richtext }}</div> -->
-
-    {% for post in page.get_children %}
+    <!-- {% for post in page.get_children %}
         <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
         {{ post.specific.intro }}
         {{ post.specific.body|richtext }}
-    {% endfor %}
+    {% endfor %} -->
+
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <!-- <h1>{{ page.title }}</h1> -->
+        <!-- <div class="intro">{{ page.intro|richtext }}</div> -->
+        <div id="scheduleTabs" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect"></div>
+      </div>
+    </div>
 
 {% endblock %}

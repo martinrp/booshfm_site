@@ -880,7 +880,7 @@ p {
   margin-bottom: 16px; }
 
 a {
-  color: rgb(255,64,129);
+  color: rgb(9,98,119);
   font-weight: 500; }
 
 blockquote {
@@ -3022,7 +3022,7 @@ ul, ol {
   background-color: rgb(1,47,60) !important; }
 
 .mdl-color--accent {
-  background-color: rgb(255,64,129) !important; }
+  background-color: rgb(9,98,119) !important; }
 
 .mdl-color--accent-contrast {
   background-color: rgb(255,255,255) !important; }
@@ -3037,7 +3037,7 @@ ul, ol {
   color: rgb(1,47,60) !important; }
 
 .mdl-color-text--accent {
-  color: rgb(255,64,129) !important; }
+  color: rgb(9,98,119) !important; }
 
 .mdl-color-text--accent-contrast {
   color: rgb(255,255,255) !important; }
@@ -3598,13 +3598,13 @@ ul, ol {
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background: rgb(255,64,129);
+    background: rgb(9,98,119);
     color: rgb(255,255,255); }
     .mdl-button .mdl-badge[data-badge]:after {
       top: -10px;
       right: -5px; }
   .mdl-badge.mdl-badge--no-background[data-badge]:after {
-    color: rgb(255,64,129);
+    color: rgb(9,98,119);
     background: rgba(255,255,255,0.2);
     box-shadow: 0 0 1px gray; }
   .mdl-badge.mdl-badge--overlap {
@@ -3896,14 +3896,14 @@ input.mdl-button[type="submit"] {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
     background-color: rgba(158,158,158, 0.40); }
   .mdl-button--fab.mdl-button--colored {
-    background: rgb(255,64,129);
+    background: rgb(9,98,119);
     color: rgb(255,255,255); }
     .mdl-button--fab.mdl-button--colored:hover {
-      background-color: rgb(255,64,129); }
+      background-color: rgb(9,98,119); }
     .mdl-button--fab.mdl-button--colored:focus:not(:active) {
-      background-color: rgb(255,64,129); }
+      background-color: rgb(9,98,119); }
     .mdl-button--fab.mdl-button--colored:active {
-      background-color: rgb(255,64,129); }
+      background-color: rgb(9,98,119); }
     .mdl-button--fab.mdl-button--colored .mdl-ripple {
       background: rgb(255,255,255); }
 
@@ -3959,12 +3959,12 @@ input.mdl-button[type="submit"] {
     background-color: rgb(9,98,119); }
 
 .mdl-button--accent.mdl-button--accent {
-  color: rgb(255,64,129); }
+  color: rgb(9,98,119); }
   .mdl-button--accent.mdl-button--accent .mdl-ripple {
     background: rgb(255,255,255); }
   .mdl-button--accent.mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--accent.mdl-button--fab {
     color: rgb(255,255,255);
-    background-color: rgb(255,64,129); }
+    background-color: rgb(9,98,119); }
 
 .mdl-button[disabled][disabled], .mdl-button.mdl-button--disabled.mdl-button--disabled {
   color: rgba(0,0,0, 0.26);
@@ -4169,7 +4169,7 @@ input.mdl-button[type="submit"] {
   box-sizing: border-box; }
 
 .mdl-card__media {
-  background-color: rgb(255,64,129);
+  background-color: rgb(9,98,119);
   background-repeat: repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -7897,7 +7897,7 @@ input.mdl-button[type="submit"] {
     bottom: 0;
     left: 0;
     position: absolute;
-    background: rgb(255,64,129);
+    background: rgb(9,98,119);
     animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) alternate forwards;
     transition: all 1s cubic-bezier(0.4, 0, 1, 1); }
   .mdl-layout__tab .mdl-layout__tab-ripple-container {
@@ -8815,7 +8815,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
   .mdl-snackbar__action {
     background: transparent;
     border: none;
-    color: rgb(255,64,129);
+    color: rgb(9,98,119);
     float: right;
     text-transform: uppercase;
     padding: 14px 24px 14px 12px;
@@ -11258,5 +11258,213 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
 .audio-player {
   text-align: center;
   align-items: center; }
+
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/*------------------------------------*    $CONTENTS
+\*------------------------------------*/
+/**
+ * STYLE GUIDE VARIABLES------------------Declarations of Sass variables
+ * -----Typography
+ * -----Colors
+ * -----Textfield
+ * -----Switch
+ * -----Spinner
+ * -----Radio
+ * -----Menu
+ * -----List
+ * -----Layout
+ * -----Icon toggles
+ * -----Footer
+ * -----Column
+ * -----Checkbox
+ * -----Card
+ * -----Button
+ * -----Animation
+ * -----Progress
+ * -----Badge
+ * -----Shadows
+ * -----Grid
+ * -----Data table
+ * -----Dialog
+ * -----Snackbar
+ * -----Tooltip
+ * -----Chip
+ *
+ * Even though all variables have the `!default` directive, most of them
+ * should not be changed as they are dependent on one another. This can cause
+ * visual distortions (like alignment issues) that are hard to track down
+ * and fix.
+ */
+/* ==========  TYPOGRAPHY  ========== */
+/* We're splitting fonts into "preferred" and "performance" in order to optimize
+   page loading. For important text, such as the body, we want it to load
+   immediately and not wait for the web font load, whereas for other sections,
+   such as headers and titles, we're OK with things taking a bit longer to load.
+   We do have some optional classes and parameters in the mixins, in case you
+   definitely want to make sure you're using the preferred font and don't mind
+   the performance hit.
+   We should be able to improve on this once CSS Font Loading L3 becomes more
+   widely available.
+*/
+/* ==========  COLORS  ========== */
+/**
+*
+* Material design color palettes.
+* @see http://www.google.com/design/spec/style/color.html
+*
+**/
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* ==========  Color Palettes  ========== */
+/* colors.scss */
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* ==========  IMAGES  ========== */
+/* ==========  Color & Themes  ========== */
+/* ==========  Typography  ========== */
+/* ==========  Components  ========== */
+/* ==========  Standard Buttons  ========== */
+/* ==========  Icon Toggles  ========== */
+/* ==========  Radio Buttons  ========== */
+/* ==========  Ripple effect  ========== */
+/* ==========  Layout  ========== */
+/* ==========  Content Tabs  ========== */
+/* ==========  Checkboxes  ========== */
+/* ==========  Switches  ========== */
+/* ==========  Spinner  ========== */
+/* ==========  Text fields  ========== */
+/* ==========  Card  ========== */
+/* ==========  Sliders ========== */
+/* ========== Progress ========== */
+/* ==========  List ========== */
+/* ==========  Item ========== */
+/* ==========  Dropdown menu ========== */
+/* ==========  Tooltips  ========== */
+/* ==========  Footer  ========== */
+/* TEXTFIELD */
+/* SWITCH */
+/* SPINNER */
+/* RADIO */
+/* MENU */
+/* LIST */
+/* LAYOUT */
+/* ICON TOGGLE */
+/* FOOTER */
+/*mega-footer*/
+/*mini-footer*/
+/* CHECKBOX */
+/* CARD */
+/* Card dimensions */
+/* Cover image */
+/* BUTTON */
+/**
+ *
+ * Dimensions
+ *
+ */
+/* ANIMATION */
+/* PROGRESS */
+/* BADGE */
+/* SHADOWS */
+/* GRID */
+/* DATA TABLE */
+/* DIALOG */
+/* SNACKBAR */
+/* TOOLTIP */
+/* CHIP */
+#scheduleTabs {
+  padding-top: 60px; }
+
+.ui-tabs-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  align-items: flex-start;
+  height: 48px;
+  padding: 0 0 0 0;
+  margin: 0;
+  border-bottom: none !important; }
+
+.ui-tabs {
+  background-color: transparent !important; }
+  .ui-tabs table {
+    border-collapse: collapse; }
+  .ui-tabs td, .ui-tabs li, .ui-tabs ul, .ui-tabs a {
+    background-color: rgba(0, 0, 0, 0.1) !important; }
+  .ui-tabs tbody td {
+    border-bottom-style: solid !important; }
+  .ui-tabs a {
+    font-family: "Nexa Light";
+    color: #ffffff; }
+  .ui-tabs .ui-state-default a, .ui-tabs .ui-state-default td {
+    border: none !important; }
+  .ui-tabs .ui-state-active {
+    border-bottom: none !important; }
+    .ui-tabs .ui-state-active a {
+      border: none !important;
+      box-sizing: border-box !important;
+      -moz-box-sizing: border-box !important;
+      -webkit-box-sizing: border-box !important;
+      border-bottom: 1px solid #fff !important; }
+  .ui-tabs h4, .ui-tabs p, .ui-tabs a, .ui-tabs td {
+    color: white !important; }
+  .ui-tabs thead h4, .ui-tabs thead p, .ui-tabs thead a, .ui-tabs thead td {
+    color: rgba(0, 0, 0, 0.9) !important; }
+
+.ui-state-default {
+  margin: 0;
+  border: none;
+  padding: 0;
+  float: left;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  height: 58px;
+  line-height: 58px;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  overflow: hidden; }
 
 /*# sourceMappingURL=../../../../../../../../static/scss/index.css.map */
