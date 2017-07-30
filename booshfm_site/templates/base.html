@@ -26,7 +26,7 @@
         <meta property="og:url" content="https://boosh.fm" />
         <meta property="og:title" content="Boosh.FM" />
         <meta property="fb:app_id" content="129743717549262" />
-        
+
         {# Global stylesheets #}
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href="/static/css/airtime-widgets.css" rel="stylesheet" type="text/css" />
@@ -98,7 +98,7 @@
                 setTimeout(functionToLoadFile, 5000);
               }
               $.ajax({
-                 url: 'https://boosh.fm/current',
+                 url: 'https://admin.boosh.fm/current',
                  type: 'GET',
                  crossDomain: true,
                  success: successFn,
@@ -110,8 +110,8 @@
               $('#songtitle').html('Big booty girls');
               $('#songartist').html('DawnDayNight');
             }
-            setTimeout(fakeFn, 10);
-            // setTimeout(functionToLoadFile, 10);
+            // setTimeout(fakeFn, 10);
+            setTimeout(functionToLoadFile, 10);
         });
         </script>
         <script type="text/javascript">
