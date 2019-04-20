@@ -150,3 +150,10 @@ WAGTAIL_SITE_NAME = "booshfm_site"
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
+
+ALLOWED_HOSTS = ['localhost', 'beta.boosh.fm', 'boosh.fm', 'eu1.boosh.fm', 'eu2.boosh.fm', 'stream.boosh.fm']
+
+GA_KEY_FILEPATH = '/home/detonate/booshfm-google-analytics.json'
+GA_VIEW_ID = '47585123'
+GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-24199925-1'
+GOOGLE_ANALYTICS_DOMAIN = 'boosh.fm'
